@@ -1,0 +1,10 @@
+# Ignorar todo por defecto
+*
+
+# Pero permitir la carpeta dist/nubesistemasinformaticos
+!dist/
+!dist/nubesistemasinformaticos/
+!dist/nubesistemasinformaticos/**
+
+# Opcional: ignorar archivos ocultos del sistema
+!.gitignore
