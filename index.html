@@ -567,6 +567,43 @@ footer {
   .about-list { grid-template-columns: 1fr; }
   section { padding: 70px 0; }
 }
+.service-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.service-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.service-image {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.service-card h3,
+.service-card p {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.service-card h3 {
+  margin-top: 20px;
+}
+
+.service-card p {
+  margin-bottom: 24px;
+}
 </style>
 </head>
 
@@ -641,47 +678,56 @@ footer {
       </p>
     </div>
 
-    <div class="service-grid">
+	<div class="service-grid">
 
-      <article class="service-card">
-        <div class="service-icon">◉</div>
-        <h3>Sistemas oftalmológicos</h3>
-        <p>
-          Soluciones digitales para la gestión integral de centros
-          oftalmológicos: pacientes, historias clínicas, turnos y
-          procesos especializados.
-        </p>
-      </article>
+	  <article class="service-card">
+		<div class="service-image">
+		  <img src="assets/images/backgrounds/inf-of.png" alt="Sistemas oftalmológicos">
+		</div>
+		<h3>Sistemas oftalmológicos</h3>
+		<p>
+		  Soluciones digitales para la gestión integral de centros
+		  oftalmológicos: pacientes, historias clínicas, turnos y
+		  procesos especializados.
+		</p>
+	  </article>
 
-      <article class="service-card">
-        <div class="service-icon">⇄</div>
-        <h3>Logística y transporte</h3>
-        <p>
-          Software adaptable a operaciones dinámicas para automatizar
-          tareas, organizar la distribución y optimizar recursos.
-        </p>
-      </article>
+	  <article class="service-card">
+		<div class="service-image">
+		  <img src="assets/images/backgrounds/inf3.jpg" alt="Logística y transporte">
+		</div>
+		<h3>Logística y transporte</h3>
+		<p>
+		  Software adaptable a operaciones dinámicas para automatizar
+		  tareas, organizar la distribución y optimizar recursos.
+		</p>
+	  </article>
 
-      <article class="service-card">
-        <div class="service-icon">▣</div>
-        <h3>Pagos y transacciones</h3>
-        <p>
-          Plataformas digitales e integraciones para pagos,
-          operaciones y gestión de clientes, con foco en seguridad
-          y escalabilidad.
-        </p>
-      </article>
+	  <article class="service-card">
+		<div class="service-image">
+		  <img src="assets/images/backgrounds/inf2.jpg" alt="Pagos y transacciones">
+		</div>
+		<h3>Pagos y transacciones</h3>
+		<p>
+		  Plataformas digitales e integraciones para pagos,
+		  operaciones y gestión de clientes, con foco en seguridad
+		  y escalabilidad.
+		</p>
+	  </article>
 
-      <article class="service-card">
-        <div class="service-icon">▥</div>
-        <h3>Análisis y gestión comercial</h3>
-        <p>
-          Herramientas para evaluación crediticia, análisis de
-          información y automatización de procesos comerciales.
-        </p>
-      </article>
+	  <article class="service-card">
+		<div class="service-image">
+		  <img src="assets/images/backgrounds/inf1.jpg" alt="Análisis y gestión comercial">
+		</div>
+		<h3>Análisis y gestión comercial</h3>
+		<p>
+		  Herramientas para evaluación crediticia, análisis de
+		  información y automatización de procesos comerciales.
+		</p>
+	  </article>
 
-    </div>
+	</div>
+
   </div>
 </section>
 
