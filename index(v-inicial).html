@@ -1,0 +1,1171 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Nube Sistemas. Desarrollo de software a medida, sistemas web y soluciones en la nube para empresas.">
+<title>Nube Sistemas | Soluciones digitales</title>
+
+<style>
+:root {
+  --dark: #101b35;
+  --blue: #326cf4;
+  --cyan: #36c8dc;
+  --text: #202b42;
+  --muted: #718096;
+  --light: #f5f8fd;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a { text-decoration: none; color: inherit; }
+
+.container {
+  width: min(1160px, 90%);
+  margin: auto;
+}
+
+/* NAV */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(16,27,53,.97);
+  backdrop-filter: blur(12px);
+}
+
+nav {
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: white;
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: linear-gradient(135deg,var(--blue),var(--cyan));
+  display: grid;
+  place-items: center;
+  font-size: 23px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  color: #d9e3f5;
+  font-size: 14px;
+}
+
+.nav-links a:hover { color: var(--cyan); }
+
+.nav-button {
+  background: var(--blue);
+  color: white;
+  padding: 11px 22px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* HERO */
+
+.hero {
+  background:
+    radial-gradient(circle at 80% 35%,#244b88 0,transparent 35%),
+    linear-gradient(120deg,#101b35,#142b51);
+  color: white;
+  overflow: hidden;
+}
+
+.hero-content {
+  min-height: 620px;
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  align-items: center;
+  gap: 40px;
+  padding: 70px 0;
+}
+
+.tag {
+  color: var(--cyan);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.hero h1 {
+  font-size: clamp(42px,5vw,65px);
+  line-height: 1.1;
+  letter-spacing: -2px;
+  margin: 23px 0;
+}
+
+.hero h1 span { color: var(--cyan); }
+
+.hero p {
+  color: #c1cce0;
+  font-size: 17px;
+  max-width: 560px;
+  line-height: 1.9;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 24px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 14px;
+  transition: .2s;
+}
+
+.btn:hover { transform: translateY(-3px); }
+
+.btn-primary {
+  background: var(--blue);
+  color: white;
+}
+
+.btn-secondary {
+  border: 1px solid #7186a9;
+  color: white;
+}
+
+.hero-graphic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 380px;
+}
+
+.cloud {
+  width: 230px;
+  height: 210px;
+  background: linear-gradient(145deg,#347cf9,#153c79);
+  border-radius: 35px;
+  display: grid;
+  place-items: center;
+  font-size: 100px;
+  box-shadow: 0 25px 80px #0005;
+  border: 1px solid #ffffff35;
+  position: relative;
+  z-index: 2;
+}
+
+.orbit {
+  position: absolute;
+  width: 390px;
+  height: 390px;
+  border: 1px solid #ffffff25;
+  border-radius: 50%;
+}
+
+.orbit:after {
+  content: "";
+  position: absolute;
+  inset: 45px;
+  border: 1px dashed #ffffff30;
+  border-radius: 50%;
+}
+
+.float {
+  position: absolute;
+  background: #203f70;
+  border: 1px solid #ffffff35;
+  padding: 15px;
+  border-radius: 15px;
+  font-size: 25px;
+  z-index: 3;
+}
+
+.float.one { top: 35px; left: 15px; }
+.float.two { right: 0; top: 115px; }
+.float.three { bottom: 25px; left: 65px; }
+
+/* SECTIONS */
+
+section { padding: 95px 0; }
+
+.section-title {
+  max-width: 700px;
+  margin-bottom: 45px;
+}
+
+.section-title small {
+  color: var(--blue);
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.section-title h2 {
+  color: var(--dark);
+  font-size: clamp(30px,4vw,43px);
+  line-height: 1.2;
+  margin: 12px 0;
+  letter-spacing: -1px;
+}
+
+.section-title p {
+  color: var(--muted);
+  font-size: 16px;
+}
+
+/* SERVICES */
+
+.services { background: var(--light); }
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 20px;
+}
+
+.service-card {
+  background: white;
+  padding: 28px 24px;
+  border-radius: 18px;
+  border: 1px solid #e7edf6;
+  transition: .25s;
+}
+
+.service-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 40px #1c396015;
+}
+
+.service-icon {
+  width: 55px;
+  height: 55px;
+  background: #edf3ff;
+  color: var(--blue);
+  border-radius: 15px;
+  display: grid;
+  place-items: center;
+  font-size: 27px;
+  margin-bottom: 22px;
+}
+
+.service-card h3 {
+  color: var(--dark);
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* ABOUT */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.about-visual {
+  min-height: 390px;
+  background: linear-gradient(145deg,#132c53,#2869a6);
+  border-radius: 25px;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-size: 130px;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-visual:before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #ffffff35;
+  border-radius: 50%;
+}
+
+.about-visual span { z-index: 1; }
+
+.about-text h2 {
+  font-size: 39px;
+  color: var(--dark);
+  line-height: 1.2;
+  margin: 15px 0 22px;
+}
+
+.about-text p {
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.about-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 25px;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.about-list span:before {
+  content: "✓";
+  color: var(--blue);
+  margin-right: 9px;
+}
+
+/* TEAM */
+
+.team { background: var(--light); }
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.person {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  text-align: center;
+  border: 1px solid #e8edf5;
+  padding-bottom: 25px;
+}
+
+.person img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  background: #eaf0fa;
+}
+
+.person h3 {
+  color: var(--dark);
+  margin-top: 18px;
+}
+
+.person p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* PROCESS */
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 30px;
+}
+
+.process {
+  border-left: 3px solid var(--blue);
+  padding: 10px 25px;
+}
+
+.process strong {
+  display: block;
+  color: var(--blue);
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.process h3 {
+  color: var(--dark);
+  margin-bottom: 10px;
+}
+
+.process p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* FAQ */
+
+.faq { background: var(--light); }
+
+.faq-list { max-width: 850px; }
+
+.faq-item {
+  background: white;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  border: 1px solid #e6ebf3;
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 19px 22px;
+  background: white;
+  border: 0;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  font-weight: 700;
+  color: var(--dark);
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.faq-answer {
+  display: none;
+  padding: 0 22px 20px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.faq-item.active .faq-answer { display: block; }
+
+/* CONTACT */
+
+.contact {
+  background: var(--dark);
+  color: white;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 60px;
+}
+
+.contact h2 {
+  font-size: 40px;
+  margin: 12px 0;
+}
+
+.contact-description { color: #bac7db; }
+
+.contact-info { margin-top: 35px; }
+
+.contact-info div {
+  margin-bottom: 24px;
+  color: #d8e1f0;
+  font-size: 15px;
+}
+
+.contact-info strong {
+  display: block;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.contact-info a:hover { color: var(--cyan); }
+
+.contact-form {
+  background: white;
+  color: var(--dark);
+  padding: 32px;
+  border-radius: 20px;
+}
+
+.contact-form h3 {
+  margin-bottom: 22px;
+  font-size: 22px;
+}
+
+.form-group { margin-bottom: 17px; }
+
+.form-group label {
+  display: block;
+  font-weight: 700;
+  font-size: 13px;
+  margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #dce3ed;
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.form-group textarea {
+  height: 125px;
+  resize: vertical;
+}
+
+.contact-form button {
+  width: 100%;
+  border: 0;
+  cursor: pointer;
+}
+
+/* FOOTER */
+
+footer {
+  background: #091225;
+  color: #aebbd0;
+  padding: 25px 0;
+  font-size: 13px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px) {
+  .service-grid { grid-template-columns: repeat(2,1fr); }
+  .hero-content { grid-template-columns: 1fr 1fr; }
+}
+
+@media(max-width:700px) {
+  .nav-links { display: none; }
+  .nav-button { display: none; }
+  .hero-content,
+  .about-grid,
+  .contact-grid { grid-template-columns: 1fr; }
+  .hero-content { padding: 65px 0; }
+  .hero-graphic { min-height: 300px; }
+  .orbit { width: 290px; height: 290px; }
+  .cloud { width: 160px; height: 150px; font-size: 75px; }
+  .service-grid,
+  .team-grid,
+  .process-grid { grid-template-columns: 1fr; }
+  .about-visual { min-height: 280px; }
+  .about-list { grid-template-columns: 1fr; }
+  section { padding: 70px 0; }
+}
+.service-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.service-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.service-image {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.service-card h3,
+.service-card p {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.service-card h3 {
+  margin-top: 20px;
+}
+
+.service-card p {
+  margin-bottom: 24px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav class="container">
+    <a href="#inicio" class="logo">
+      <span class="logo-icon">☁</span>
+      NUBE SISTEMAS
+    </a>
+
+    <div class="nav-links">
+      <a href="#servicios">Servicios</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#preguntas">FAQ</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+
+    <a href="#contacto" class="nav-button">Hablemos →</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- PORTADA -->
+
+<section class="hero" id="inicio">
+  <div class="container hero-content">
+    <div>
+      <div class="tag">Tecnología para hacer crecer tu negocio</div>
+
+      <h1>
+        Transformamos ideas en
+        <span>soluciones digitales.</span>
+      </h1>
+
+      <p>
+        Desarrollamos software a medida, sistemas web y soluciones
+        en la nube. Tecnología pensada para resolver necesidades
+        reales y acompañar el crecimiento de tu organización.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#contacto" class="btn btn-primary">Contanos tu proyecto →</a>
+        <a href="#servicios" class="btn btn-secondary">Nuestros servicios</a>
+      </div>
+    </div>
+
+    <div class="hero-graphic">
+      <div class="orbit"></div>
+      <div class="cloud">☁</div>
+      <div class="float one">⌘</div>
+      <div class="float two">⇄</div>
+      <div class="float three">↗</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+
+<section class="services" id="servicios">
+  <div class="container">
+
+    <div class="section-title">
+      <small>Qué hacemos</small>
+      <h2>Tecnología aplicada a cada desafío.</h2>
+      <p>
+        Desarrollamos soluciones digitales adaptadas a las necesidades
+        de cada negocio, optimizando procesos y conectando información.
+      </p>
+    </div>
+
+	<div class="service-grid">
+
+	  <article class="service-card">
+		<div class="service-image">
+		  <img src="assets/images/backgrounds/inf-of.png" alt="Sistemas oftalmológicos">
+		</div>
+		<h3>Sistemas oftalmológicos</h3>
+		<p>
+		  Soluciones digitales para la gestión integral de centros
+		  oftalmológicos: pacientes, historias clínicas, turnos y
+		  procesos especializados.
+		</p>
+	  </article>
+
+	  <article class="service-card">
+		<div class="service-image">
+		  <img src="assets/images/backgrounds/inf3.jpg" alt="Logística y transporte">
+		</div>
+		<h3>Logística y transporte</h3>
+		<p>
+		  Software adaptable a operaciones dinámicas para automatizar
+		  tareas, organizar la distribución y optimizar recursos.
+		</p>
+	  </article>
+
+	  <article class="service-card">
+		<div class="service-image">
+		  <img src="assets/images/backgrounds/inf2.jpg" alt="Pagos y transacciones">
+		</div>
+		<h3>Pagos y transacciones</h3>
+		<p>
+		  Plataformas digitales e integraciones para pagos,
+		  operaciones y gestión de clientes, con foco en seguridad
+		  y escalabilidad.
+		</p>
+	  </article>
+
+	  <article class="service-card">
+		<div class="service-image">
+		  <img src="assets/images/backgrounds/inf1.jpg" alt="Análisis y gestión comercial">
+		</div>
+		<h3>Análisis y gestión comercial</h3>
+		<p>
+		  Herramientas para evaluación crediticia, análisis de
+		  información y automatización de procesos comerciales.
+		</p>
+	  </article>
+
+	</div>
+
+  </div>
+</section>
+
+<!-- NOSOTROS -->
+
+<section id="nosotros">
+  <div class="container about-grid">
+
+    <div class="about-visual">
+      <span>☁</span>
+    </div>
+
+    <div class="about-text">
+      <div class="tag">Quiénes somos</div>
+
+      <h2>Un equipo que entiende la tecnología y tu negocio.</h2>
+
+      <p>
+        <strong>Nube Sistemas</strong> es una empresa de software
+        conformada por profesionales en ingeniería de sistemas y
+        otras áreas tecnológicas.
+      </p>
+
+      <p>
+        Nos especializamos en el desarrollo de soluciones a medida,
+        adaptándonos a las necesidades específicas de cada cliente.
+      </p>
+
+      <p>
+        Nuestro compromiso se basa en la responsabilidad,
+        la disponibilidad y una comunicación clara, brindando
+        respuestas oportunas durante cada etapa del proyecto.
+      </p>
+
+      <div class="about-list">
+        <span>Desarrollo personalizado</span>
+        <span>Comunicación directa</span>
+        <span>Compromiso profesional</span>
+        <span>Acompañamiento tecnológico</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- EQUIPO -->
+
+<section class="team" id="equipo">
+  <div class="container">
+
+    <div class="section-title">
+      <small>Nuestro equipo</small>
+      <h2>Personas detrás de cada solución.</h2>
+      <p>
+        Un equipo multidisciplinario que combina experiencia técnica,
+        organización y conocimiento comercial.
+      </p>
+    </div>
+
+    <div class="team-grid">
+
+      <article class="person">
+        <img src="https://nubesistemasinformaticos.github.io/sitio-web-nube/assets/images/team/generico-f.png" alt="Gilda Diorio">
+        <h3>Gilda Diorio</h3>
+        <p>Gestora de Proyectos</p>
+      </article>
+
+      <article class="person">
+        <img src="https://nubesistemasinformaticos.github.io/sitio-web-nube/assets/images/team/generico-m.png" alt="Emiliano Recofsky">
+        <h3>Emiliano Recofsky</h3>
+        <p>Ingeniero de Sistemas</p>
+      </article>
+
+      <article class="person">
+        <img src="https://nubesistemasinformaticos.github.io/sitio-web-nube/assets/images/team/generico-m.png" alt="Gustavo Diorio">
+        <h3>Gustavo Diorio</h3>
+        <p>Ventas de servicios y productos</p>
+      </article>
+
+      <article class="person">
+        <img src="https://nubesistemasinformaticos.github.io/sitio-web-nube/assets/images/team/generico-e.png" alt="Equipo de Desarrollo">
+        <h3>Equipo de Desarrollo</h3>
+        <p>Desarrollo de Software</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- METODOLOGÍA -->
+
+<section>
+  <div class="container">
+
+    <div class="section-title">
+      <small>Nuestra forma de trabajar</small>
+      <h2>De la idea a una solución funcionando.</h2>
+      <p>
+        Un proceso claro y colaborativo, enfocado en los objetivos
+        de cada proyecto.
+      </p>
+    </div>
+
+    <div class="process-grid">
+
+      <article class="process">
+        <strong>01</strong>
+        <h3>Entendemos tu necesidad</h3>
+        <p>
+          Conversamos sobre tu organización, los desafíos actuales
+          y los resultados que buscás alcanzar.
+        </p>
+      </article>
+
+      <article class="process">
+        <strong>02</strong>
+        <h3>Diseñamos la solución</h3>
+        <p>
+          Definimos el alcance y proponemos una alternativa
+          tecnológica acorde a tus objetivos.
+        </p>
+      </article>
+
+      <article class="process">
+        <strong>03</strong>
+        <h3>Desarrollamos y acompañamos</h3>
+        <p>
+          Construimos la solución y acompañamos su puesta en marcha
+          y evolución.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- PREGUNTAS FRECUENTES -->
+
+<section class="faq" id="preguntas">
+  <div class="container">
+
+    <div class="section-title">
+      <small>Preguntas frecuentes</small>
+      <h2>Resolvemos tus dudas.</h2>
+      <p>
+        Conocé cómo podemos ayudarte a desarrollar, mejorar y hacer crecer
+        tus soluciones tecnológicas.
+      </p>
+    </div>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-question">🚀 ¿Realizan desarrollos a medida? <span>＋</span></button>
+        <div class="faq-answer">
+          Sí, creamos software totalmente personalizado según las necesidades,
+          objetivos y procesos de cada cliente. Nos adaptamos a cada proyecto,
+          desde una idea inicial hasta soluciones empresariales complejas.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">🤝 ¿Pueden integrarse a nuestro equipo tecnológico? <span>＋</span></button>
+        <div class="faq-answer">
+          Sí. Podemos acompañar a tu equipo tecnológico, sumar profesionales
+          especializados y colaborar en proyectos, desarrollos, mantenimiento
+          o necesidades puntuales. Nos adaptamos a la dinámica de trabajo
+          y a las herramientas de cada organización.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">🛠️ Si quiero desarrollar un sistema, ¿cómo es el proceso? <span>＋</span></button>
+        <div class="faq-answer">
+          1️⃣ Nos presentás tu idea, sin importar en qué etapa esté.<br>
+          2️⃣ Analizamos el proyecto y te preparamos una propuesta.<br>
+          3️⃣ Nos reunimos (presencial o por videollamada) para presentarte el plan de desarrollo.<br>
+          4️⃣ Una vez aprobada la propuesta, comenzamos el desarrollo.<br>
+          5️⃣ Cada mes te mostramos avances hasta la entrega final.<br>
+          6️⃣ Luego del lanzamiento, ofrecemos <strong>soporte, mantenimiento y nuevas funcionalidades</strong>.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">💻 ¿Qué tipo de soluciones tecnológicas desarrollan? <span>＋</span></button>
+        <div class="faq-answer">
+          Desarrollamos soluciones tecnológicas para distintas necesidades y sectores:
+          <br><br>
+          - <strong>🏦 Finanzas y Banca:</strong> sistemas de gestión, cobros digitales y billeteras virtuales.<br>
+          - <strong>🚛 Logística y Transporte:</strong> control de flotas, rastreo y optimización de rutas.<br>
+          - <strong>🛒 Comercio y Retail:</strong> tiendas online, e-commerce y gestión de inventarios.<br>
+          - <strong>📦 Gestión empresarial:</strong> ERP, CRM, administración de negocios y procesos.<br>
+          - <strong>🏥 Salud:</strong> historias clínicas digitales, gestión de turnos y sistemas médicos.<br>
+          - <strong>📚 Educación:</strong> plataformas de aprendizaje y aulas virtuales.<br>
+          - <strong>🎫 Eventos y Entretenimiento:</strong> venta de entradas y plataformas digitales.<br>
+          - <strong>⚙ Industria:</strong> control de producción, trazabilidad y automatización.<br>
+          - <strong>🏨 Turismo y Hotelería:</strong> reservas y administración de hospedajes.<br>
+          - <strong>🏡 Bienes raíces:</strong> portales inmobiliarios y gestión de propiedades.<br>
+          - <strong>🌱 Agroindustria:</strong> gestión de producción, maquinaria y monitoreo.
+          <br><br>
+          También trabajamos en integraciones, automatizaciones, modernización
+          de sistemas existentes y soluciones específicas para cada negocio.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">📱 ¿Desarrollan aplicaciones móviles? <span>＋</span></button>
+        <div class="faq-answer">
+          Sí, desarrollamos <strong>aplicaciones para Android e iOS</strong>,
+          con interfaces intuitivas y alto rendimiento. También podemos
+          desarrollar aplicaciones web adaptadas a distintos dispositivos.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">🔄 ¿Pueden trabajar sobre un sistema que ya tenemos? <span>＋</span></button>
+        <div class="faq-answer">
+          Sí. Podemos analizar sistemas existentes, incorporar nuevas
+          funcionalidades, corregir problemas, mejorar su rendimiento,
+          realizar integraciones o modernizar tecnologías. No es necesario
+          comenzar un proyecto desde cero.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">🔌 ¿Pueden integrar mi sistema con otros servicios? <span>＋</span></button>
+        <div class="faq-answer">
+          Sí, desarrollamos <strong>APIs e integraciones</strong> para conectar
+          sistemas con plataformas de pago, servicios externos, CRMs, ERPs,
+          sistemas de terceros y otras herramientas. También trabajamos con
+          automatización e intercambio de información entre plataformas.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">📈 ¿Cuánto cuesta desarrollar un sistema o aplicación? <span>＋</span></button>
+        <div class="faq-answer">
+          El costo varía según la complejidad y el alcance del proyecto.
+          Antes de cotizar, analizamos tu idea y te presentamos
+          <strong>una propuesta con opciones y precios</strong>.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">⏳ ¿Cuánto tiempo tarda el desarrollo? <span>＋</span></button>
+        <div class="faq-answer">
+          El tiempo depende del tamaño y alcance del proyecto.
+          <br>
+          - <strong>Sistemas pequeños:</strong> 2 a 3 meses.<br>
+          - <strong>Proyectos medianos:</strong> 3 a 6 meses.<br>
+          - <strong>Sistemas complejos:</strong> 6+ meses.<br>
+          Siempre trabajamos con <strong>entregas parciales</strong>
+          para que puedas ver avances periódicamente.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">🔄 ¿Ofrecen mantenimiento y actualizaciones? <span>＋</span></button>
+        <div class="faq-answer">
+          Sí, ofrecemos <strong>planes de mantenimiento</strong> para
+          garantizar que tu sistema siga funcionando correctamente.
+          También podemos agregar nuevas funcionalidades, mejoras y
+          actualizaciones según las necesidades de tu negocio.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">🔐 ¿Qué tan seguro será mi sistema? <span>＋</span></button>
+        <div class="faq-answer">
+          Nos enfocamos en <strong>seguridad desde el diseño</strong>, aplicando
+          medidas según las características de cada proyecto:
+          <br>
+          - 🔒 Cifrado de datos.<br>
+          - 🔄 Backups automáticos.<br>
+          - 🛡️ Protección contra ataques.<br>
+          - 🔑 Gestión de usuarios, permisos y controles de acceso.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">📞 ¿Ofrecen soporte y asistencia técnica? <span>＋</span></button>
+        <div class="faq-answer">
+          Sí, ofrecemos soporte y asistencia técnica para acompañarte
+          durante el funcionamiento de las soluciones desarrolladas.
+          Contamos con modalidades de atención y mantenimiento que se
+          pueden adaptar a las necesidades de cada proyecto.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">🌎 ¿Trabajan con empresas de otras ciudades o países? <span>＋</span></button>
+        <div class="faq-answer">
+          Sí. Trabajamos con clientes de distintas ubicaciones.
+          Podemos coordinar reuniones, relevamientos y seguimiento
+          de proyectos de manera remota, sin importar dónde se encuentre
+          tu empresa.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">💡 ¿Puedo consultarles una idea aunque todavía no tenga definido el proyecto? <span>＋</span></button>
+        <div class="faq-answer">
+          ¡Por supuesto! No necesitás tener todos los detalles definidos.
+          Podemos ayudarte a analizar tu idea, identificar alternativas
+          tecnológicas y encontrar la mejor manera de llevarla adelante.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+
+<section class="contact" id="contacto">
+  <div class="container contact-grid">
+
+    <div>
+      <div class="tag">Contacto</div>
+      <h2>Hablemos de tu próximo proyecto.</h2>
+
+      <p class="contact-description">
+        Estamos para escuchar tu idea, responder tus consultas
+        y ayudarte a encontrar una solución tecnológica.
+      </p>
+
+      <div class="contact-info">
+
+        <div>
+          <strong>✉ Email</strong>
+          <a href="mailto:ventasnubesistem@gmail.com">
+            ventasnubesistem@gmail.com
+          </a><br>
+          <a href="mailto:nubesistemasinformaticos@gmail.com">
+            nubesistemasinformaticos@gmail.com
+          </a>
+        </div>
+
+        <div>
+          <strong>☎ Teléfono</strong>
+          <a href="tel:+542284384340">2284-384340</a>
+        </div>
+
+        <div>
+          <strong>⌖ Ubicaciones</strong>
+          Sede Olavarría, Buenos Aires, Argentina.<br>
+          Sede Tigre, Buenos Aires, Argentina.
+        </div>
+
+      </div>
+    </div>
+
+    <form class="contact-form" id="contactForm">
+      <h3>Envianos tu consulta</h3>
+
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" required placeholder="Tu nombre">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" required placeholder="tu@email.com">
+      </div>
+
+      <div class="form-group">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" required placeholder="Contanos sobre tu proyecto..."></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">
+        Enviar consulta →
+      </button>
+
+    </form>
+
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container footer-content">
+    <strong>NUBE SISTEMAS</strong>
+    <span>© <span id="year"></span> Nube Sistemas. Todos los derechos reservados.</span>
+  </div>
+</footer>
+
+<script>
+  // Preguntas frecuentes
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      const item = button.closest('.faq-item');
+      item.classList.toggle('active');
+    });
+  });
+
+  // Formulario de contacto mediante correo
+  document.getElementById('contactForm').addEventListener('submit', event => {
+    event.preventDefault();
+
+    const nombre = document.getElementById('nombre').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const mensaje = document.getElementById('mensaje').value.trim();
+
+    const subject = encodeURIComponent('Consulta desde el sitio web - Nube Sistemas');
+    const body = encodeURIComponent(
+      `Nombre: ${nombre}\nEmail: ${email}\n\nMensaje:\n${mensaje}`
+    );
+
+    window.location.href =
+      `mailto:ventasnubesistem@gmail.com?subject=${subject}&body=${body}`;
+  });
+
+  // Año automático
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const nombre = document.getElementById('nombre').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const mensaje = document.getElementById('mensaje').value.trim();
+
+    const asunto = encodeURIComponent('Consulta desde la web - Nube Sistemas');
+    const cuerpo = encodeURIComponent(
+      'Nombre: ' + nombre + '\n' +
+      'Email: ' + email + '\n\n' +
+      'Mensaje:\n' + mensaje
+    );
+
+    window.location.href =
+      'mailto:ventasnubesistem@gmail.com?cc=nubesistemasinformaticos@gmail.com&subject=' +
+      asunto + '&body=' + cuerpo;
+  });
+</script>
+
+</body>
+</html>

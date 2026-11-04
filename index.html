@@ -10,7 +10,7 @@
 <style>
 :root {
   --dark: #101b35;
-  --blue: #326cf4;
+  --blue: #2196f3;
   --cyan: #36c8dc;
   --text: #202b42;
   --muted: #718096;
@@ -171,7 +171,7 @@ nav {
 .cloud {
   width: 230px;
   height: 210px;
-  background: linear-gradient(145deg,#347cf9,#153c79);
+  background: linear-gradient(145deg,#42a5f5,#153c79);
   border-radius: 35px;
   display: grid;
   place-items: center;
@@ -604,6 +604,146 @@ footer {
 .service-card p {
   margin-bottom: 24px;
 }
+
+/* ===== NUBE SISTEMAS / VISUAL SIGNATURE ===== */
+:root{--dark:#071329;--blue:#2196f3;--cyan:#5ef0e4;--text:#17243d;--muted:#687894;--light:#f2f6fc;--electric:#8b5cf6}
+html{scroll-padding-top:90px}
+body{background:#f7f9fd;overflow-x:hidden}
+header{background:#071329;border-bottom:1px solid rgba(145,190,255,.13);box-shadow:0 8px 24px rgba(5,15,34,.18);backdrop-filter:none;-webkit-backdrop-filter:none}
+nav{height:82px}
+.logo{letter-spacing:1.6px;font-size:20px}
+.logo-icon{box-shadow:0 0 24px rgba(33,150,243,.5),inset 0 1px 0 #ffffff70;border:1px solid #ffffff40}
+.nav-links{gap:clamp(15px,2.2vw,30px);font-weight:600}
+.nav-links a{position:relative;transition:color .25s}
+.nav-links a:after{content:"";position:absolute;left:0;right:100%;bottom:-8px;height:2px;background:linear-gradient(90deg,var(--cyan),var(--blue));transition:right .25s}
+.nav-links a:hover:after{right:0}
+.nav-button{box-shadow:0 8px 24px #2196f34a;transition:transform .25s,box-shadow .25s}
+.nav-button:hover{transform:translateY(-2px);box-shadow:0 12px 32px #2196f377}
+.hero{position:relative;isolation:isolate;background:#061329;background-image:radial-gradient(ellipse at 75% 20%,rgba(33,150,243,.28),transparent 35%),radial-gradient(ellipse at 15% 90%,rgba(33,217,210,.12),transparent 35%),linear-gradient(125deg,#061329 0%,#0b1c3d 52%,#09152d 100%);min-height:690px}
+.hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(5,15,34,.35),transparent 55%),radial-gradient(circle at 50% 50%,transparent 0 1px,rgba(255,255,255,.035) 1px 2px);background-size:auto,28px 28px;mask-image:linear-gradient(to bottom,black,transparent 95%)}
+.hero-grid-bg{position:absolute;inset:0;pointer-events:none;opacity:.25;background-image:linear-gradient(rgba(114,164,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(114,164,255,.12) 1px,transparent 1px);background-size:72px 72px;mask-image:radial-gradient(ellipse at 70% 50%,black,transparent 70%)}
+.hero-content-wrap{position:relative;z-index:1}
+.hero-content{min-height:690px;padding:90px 0;grid-template-columns:1.04fr .96fr;gap:25px}
+.hero .tag{display:inline-flex;align-items:center;gap:10px;padding:9px 14px;border:1px solid rgba(94,240,228,.25);border-radius:100px;background:rgba(94,240,228,.07);letter-spacing:1.7px;font-size:11px}
+.hero .tag:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 12px var(--cyan)}
+.hero h1{font-size:clamp(46px,5.2vw,76px);line-height:1.04;letter-spacing:-2.8px;margin:26px 0 24px;max-width:720px;text-wrap:balance}
+.hero h1 span{background:linear-gradient(100deg,#65f3e6 0%,#7db8ff 48%,#a58bff 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 8px 30px rgba(70,135,255,.18))}
+.hero p{font-size:17px;max-width:535px;color:#c5d3ea;line-height:1.85}
+.btn{padding:15px 25px;border-radius:13px;transition:transform .25s,box-shadow .25s,background .25s}
+.btn-primary{background:linear-gradient(110deg,#2196f3,#1976d2);box-shadow:0 12px 32px rgba(33,150,243,.32);border:1px solid rgba(255,255,255,.2)}
+.btn-primary:hover{box-shadow:0 16px 42px rgba(33,150,243,.48);transform:translateY(-4px)}
+.btn-secondary{border:1px solid rgba(181,204,244,.35);background:rgba(255,255,255,.045);backdrop-filter:blur(12px)}
+.btn-secondary:hover{background:rgba(255,255,255,.1);transform:translateY(-4px)}
+.hero-graphic{min-height:470px;perspective:1000px;isolation:isolate}
+.hero-glow{position:absolute;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(33,150,243,.42),rgba(33,150,243,.08) 45%,transparent 70%);filter:blur(12px);animation:glowPulse 5s ease-in-out infinite}
+.cloud{width:235px;height:215px;border-radius:42px;background:linear-gradient(145deg,rgba(53,116,255,.78),rgba(12,42,94,.88));border:1px solid rgba(195,224,255,.42);box-shadow:0 35px 100px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.35),0 0 65px rgba(33,150,243,.28);font-size:105px;backdrop-filter:blur(18px);transform:rotateY(-12deg) rotateX(7deg);animation:cloudFloat 6s ease-in-out infinite}
+.cloud:after{content:"";position:absolute;inset:12px;border-radius:32px;border:1px solid rgba(255,255,255,.13);pointer-events:none}
+.orbit{width:430px;height:430px;border-color:rgba(143,190,255,.25);transform:rotateX(62deg) rotateZ(-18deg);box-shadow:0 0 50px rgba(33,150,243,.08);animation:orbitSpin 28s linear infinite}
+.orbit:after{inset:28px;border:1px dashed rgba(94,240,228,.25)}
+.hero-ring{position:absolute;border:1px solid rgba(120,175,255,.22);border-radius:50%;transform:rotateX(62deg) rotateZ(24deg);pointer-events:none}
+.ring-a{width:500px;height:500px;animation:orbitSpin 34s linear infinite}
+.ring-b{width:345px;height:345px;border-style:dashed;border-color:rgba(94,240,228,.25);animation:orbitSpin 23s linear infinite reverse}
+.ring-c{width:580px;height:580px;border-color:rgba(151,130,255,.12);animation:orbitSpin 48s linear infinite}
+.hero-node{position:absolute;width:12px;height:12px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 7px rgba(94,240,228,.08),0 0 25px var(--cyan);z-index:4}
+.node-a{top:18%;left:20%}.node-b{right:12%;top:38%;background:#a58bff;box-shadow:0 0 0 7px rgba(165,139,255,.1),0 0 25px #a58bff}.node-c{bottom:14%;left:38%;width:8px;height:8px}
+.float{background:rgba(19,43,82,.78);border:1px solid rgba(176,211,255,.28);box-shadow:0 18px 45px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.12);backdrop-filter:blur(16px);border-radius:18px;font-size:28px;animation:floatCard 5s ease-in-out infinite}
+.float.two{animation-delay:-1.7s}.float.three{animation-delay:-3s}
+section{padding:105px 0}
+.section-title{max-width:760px;margin-bottom:52px}
+.section-title small{display:inline-block;font-size:11px;letter-spacing:2.3px;color:#2196f3}
+.section-title h2{font-size:clamp(32px,4vw,48px);letter-spacing:-1.7px;line-height:1.12}
+.section-title p{max-width:660px;line-height:1.8}
+.services,.team,.faq{background:linear-gradient(180deg,#f3f6fc,#f8faff)}
+.service-grid{gap:22px}
+.service-card{border-radius:22px;border:1px solid #e3eaf5;box-shadow:0 8px 24px rgba(16,38,78,.035);transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,border-color .35s;position:relative;background:#fff}
+.service-card:after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(140deg,rgba(94,240,228,.0),rgba(33,150,243,.06));opacity:0;transition:opacity .3s}
+.service-card:hover{transform:translateY(-10px);border-color:#c6d7ff;box-shadow:0 24px 55px rgba(32,72,140,.13)}
+.service-card:hover:after{opacity:1}
+.service-image{height:205px;position:relative;background:#e8eff9}
+.service-image:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(7,19,41,.24));pointer-events:none}
+.service-image img{transition:transform .65s cubic-bezier(.2,.8,.2,1);object-fit:cover}
+.service-card:hover .service-image img{transform:scale(1.055)}
+.service-card h3{font-size:18px;letter-spacing:-.3px;margin-top:23px}
+.service-card p{line-height:1.75;min-height:96px}
+.about-grid{gap:80px}
+.about-visual{min-height:440px;border-radius:30px;background:radial-gradient(circle at 50% 45%,rgba(74,134,255,.8),transparent 40%),linear-gradient(145deg,#07152e,#123d72 65%,#0b2448);box-shadow:0 28px 70px rgba(12,38,82,.2);isolation:isolate}
+.about-visual:before{width:360px;height:360px;border:1px solid rgba(180,220,255,.32);box-shadow:0 0 0 35px rgba(180,220,255,.035),0 0 0 75px rgba(180,220,255,.025);animation:orbitSpin 40s linear infinite}
+.about-visual:after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:35px 35px;mask-image:radial-gradient(circle,black,transparent 75%)}
+.about-visual span{font-size:145px;filter:drop-shadow(0 18px 30px rgba(0,0,0,.25));animation:cloudFloat 6s ease-in-out infinite}
+.about-text h2{font-size:clamp(32px,3.7vw,45px);letter-spacing:-1.5px}
+.about-list span{display:flex;align-items:center;gap:9px}
+.about-list span:before{margin:0;display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:#eaf0ff;font-size:12px;flex:0 0 22px}
+.team-grid{gap:22px}
+.person{border-radius:22px;border:1px solid #e4eaf4;box-shadow:0 10px 30px rgba(16,38,78,.045);transition:transform .3s,box-shadow .3s}
+.person:hover{transform:translateY(-8px);box-shadow:0 24px 50px rgba(16,38,78,.13)}
+.person img{height:265px;background:linear-gradient(145deg,#edf3fc,#dce7f7);object-fit:contain;transition:transform .35s}
+.person:hover img{transform:scale(1.025)}
+.person h3{font-size:17px;margin-top:20px}
+.process-grid{gap:22px}
+.process{border:1px solid #e5ebf5;border-left:3px solid #2196f3;border-radius:0 18px 18px 0;padding:24px 25px;background:linear-gradient(110deg,#fff,rgba(255,255,255,.5));transition:transform .3s,box-shadow .3s}
+.process:hover{transform:translateY(-5px);box-shadow:0 16px 36px rgba(16,38,78,.08)}
+.process strong{font-size:38px;background:linear-gradient(100deg,#2196f3,#38c9d8);-webkit-background-clip:text;background-clip:text;color:transparent}
+.faq-list{max-width:900px}
+.faq-item{border-radius:16px;box-shadow:0 5px 20px rgba(16,38,78,.025);transition:border-color .25s,box-shadow .25s}
+.faq-item.active{border-color:#c5d7ff;box-shadow:0 12px 30px rgba(42,88,170,.08)}
+.faq-question{padding:21px 24px;font-size:15px}
+.faq-item.active .faq-question{color:#1976d2}
+.faq-answer{line-height:1.8}
+.contact{position:relative;overflow:hidden;background:radial-gradient(ellipse at 10% 15%,rgba(53,111,255,.22),transparent 38%),radial-gradient(ellipse at 90% 90%,rgba(94,240,228,.12),transparent 35%),linear-gradient(125deg,#071329,#0c2145 65%,#071329)}
+.contact:before{content:"";position:absolute;width:600px;height:600px;border:1px solid rgba(122,175,255,.12);border-radius:50%;right:-230px;top:-240px;box-shadow:0 0 0 55px rgba(122,175,255,.025),0 0 0 110px rgba(122,175,255,.02)}
+.contact-grid{position:relative;z-index:1;align-items:center}
+.contact h2{font-size:clamp(34px,4vw,48px);letter-spacing:-1.5px;line-height:1.12}
+.contact-form{border:1px solid rgba(255,255,255,.65);box-shadow:0 28px 80px rgba(0,0,0,.25);border-radius:24px;padding:36px}
+.form-group input,.form-group textarea{background:#f9fbff;border-color:#dbe4f2;transition:border-color .2s,box-shadow .2s}
+.form-group input:focus,.form-group textarea:focus{outline:none;border-color:#64b5f6;box-shadow:0 0 0 4px rgba(33,150,243,.12)}
+.contact-form button{border-radius:12px}
+footer{background:#040b18;border-top:1px solid rgba(150,190,255,.12)}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+.reveal.is-visible{opacity:1;transform:translateY(0)}
+.mobile-toggle{display:none;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);width:44px;height:44px;border-radius:12px;align-items:center;justify-content:center;flex-direction:column;gap:5px;cursor:pointer}
+.mobile-toggle span{display:block;width:19px;height:2px;background:#eaf2ff;border-radius:2px;transition:transform .2s,opacity .2s}
+.mobile-toggle.active span:first-child{transform:translateY(7px) rotate(45deg)}
+.mobile-toggle.active span:nth-child(2){opacity:0}
+.mobile-toggle.active span:last-child{transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none}
+@keyframes cloudFloat{0%,100%{transform:translateY(0) rotateY(-12deg) rotateX(7deg)}50%{transform:translateY(-13px) rotateY(-8deg) rotateX(4deg)}}
+@keyframes floatCard{0%,100%{translate:0 0}50%{translate:0 -12px}}
+@keyframes orbitSpin{from{rotate:0deg}to{rotate:360deg}}
+@keyframes glowPulse{0%,100%{opacity:.7;scale:1}50%{opacity:1;scale:1.12}}
+@media(max-width:1050px){.hero-content{grid-template-columns:1fr 1fr}.hero h1{font-size:clamp(42px,5.3vw,62px)}.service-grid{grid-template-columns:repeat(2,1fr)}.about-grid{gap:45px}}
+@media(max-width:760px){
+ nav{height:72px}.nav-links,.nav-button{display:none}.mobile-toggle{display:flex}
+ .mobile-menu{display:flex;position:absolute;top:72px;left:0;right:0;flex-direction:column;gap:0;padding:10px 5% 20px;background:rgba(5,15,34,.97);border-bottom:1px solid rgba(145,190,255,.18);backdrop-filter:blur(18px);box-shadow:0 20px 35px rgba(0,0,0,.25);opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .2s,transform .2s,visibility .2s}
+ .mobile-menu.open{opacity:1;visibility:visible;transform:translateY(0)}
+ .mobile-menu a{padding:13px 5px;color:#e1eaff;border-bottom:1px solid rgba(255,255,255,.07);font-size:15px}
+ .mobile-menu a:last-child{margin-top:12px;text-align:center;border:0;border-radius:30px;background:#2196f3;color:#fff;font-weight:700}
+ .hero{min-height:auto}.hero-content{min-height:auto;grid-template-columns:1fr;padding:76px 0 55px;gap:10px}.hero h1{font-size:clamp(42px,10vw,60px);letter-spacing:-1.8px}.hero p{font-size:16px}.hero-graphic{min-height:330px;margin-top:5px}.cloud{width:170px;height:155px;font-size:76px;border-radius:30px}.orbit{width:300px;height:300px}.ring-a{width:350px;height:350px}.ring-b{width:260px;height:260px}.ring-c{width:410px;height:410px}.float{padding:11px;font-size:22px;border-radius:14px}.float.one{top:20px;left:7%}.float.two{right:4%;top:90px}.float.three{bottom:10px;left:20%}.node-a{left:12%}.node-b{right:10%}
+ section{padding:75px 0}.section-title{margin-bottom:35px}.section-title h2{font-size:34px}.service-grid,.team-grid,.process-grid{grid-template-columns:1fr}.service-image{height:220px}.service-card p{min-height:0}.about-grid,.contact-grid{grid-template-columns:1fr;gap:35px}.about-visual{min-height:300px}.about-visual:before{width:240px;height:240px}.about-visual span{font-size:110px}.person img{height:260px}.contact-form{padding:25px}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+
+
+/* Componentes visuales de software alrededor de la nube */
+.tech-panel{position:absolute;z-index:5;display:flex;align-items:center;gap:11px;padding:13px 15px;background:linear-gradient(145deg,rgba(22,49,91,.88),rgba(10,27,55,.78));border:1px solid rgba(164,205,255,.3);border-radius:15px;box-shadow:0 18px 48px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.12);backdrop-filter:blur(16px);animation:floatCard 6s ease-in-out infinite}
+.tech-code{top:9%;left:1%;transform:rotate(-7deg)}
+.tech-data{right:0;top:34%;transform:rotate(6deg);animation-delay:-2s}
+.tech-network{bottom:9%;left:10%;transform:rotate(-4deg);animation-delay:-3.5s}
+.tech-icon{display:grid;place-items:center;width:43px;height:43px;border-radius:11px;background:linear-gradient(145deg,rgba(75,132,255,.3),rgba(63,226,220,.12));border:1px solid rgba(112,176,255,.28);color:#83d9ff;font:700 16px/1.1 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:-1px}
+.tech-lines{display:flex;flex-direction:column;gap:5px;width:48px}
+.tech-lines i{display:block;height:4px;border-radius:5px;background:linear-gradient(90deg,rgba(103,169,255,.85),rgba(103,169,255,.18))}
+.tech-lines i:nth-child(2){width:75%;background:linear-gradient(90deg,rgba(85,225,218,.75),rgba(85,225,218,.12))}
+.tech-lines i:nth-child(3){width:48%}
+.database-icon{position:relative;width:34px;height:36px;display:flex;flex-direction:column;justify-content:space-between;padding:3px 0}
+.database-icon i{display:block;height:12px;border:1.5px solid #6be2df;border-radius:50%;background:rgba(55,198,211,.12);box-shadow:0 0 12px rgba(55,198,211,.12)}
+.database-icon i:nth-child(2),.database-icon i:nth-child(3){border-top:0;border-radius:0 0 50% 50%;height:9px;margin-top:-6px}
+.network-icon{position:relative;width:39px;height:39px;display:block}
+.network-icon:before,.network-icon:after{content:"";position:absolute;height:2px;background:rgba(126,174,255,.8);transform-origin:left center}
+.network-icon:before{width:22px;left:8px;top:11px;transform:rotate(35deg)}
+.network-icon:after{width:22px;left:9px;top:29px;transform:rotate(-35deg)}
+.network-icon i,.network-icon b{position:absolute;width:9px;height:9px;border-radius:50%;background:#7caeff;box-shadow:0 0 12px rgba(124,174,255,.6);z-index:1}
+.network-icon i:nth-child(1){left:2px;top:15px}.network-icon i:nth-child(2){right:2px;top:2px;background:#67e2dc}.network-icon i:nth-child(3){right:2px;bottom:2px;background:#a795ff}.network-icon b{left:15px;top:15px;width:8px;height:8px;background:#e2f7ff}
+@media(max-width:700px){.tech-panel{padding:10px 11px;gap:8px;border-radius:12px}.tech-icon{width:35px;height:35px;font-size:14px}.tech-lines{width:35px}.tech-code{top:7%;left:0}.tech-data{right:0;top:30%}.tech-network{bottom:7%;left:7%}}
+
 </style>
 </head>
 
@@ -616,6 +756,7 @@ footer {
       NUBE SISTEMAS
     </a>
 
+    <button class="mobile-toggle" type="button" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
     <div class="nav-links">
       <a href="#servicios">Servicios</a>
       <a href="#nosotros">Nosotros</a>
@@ -633,6 +774,8 @@ footer {
 <!-- PORTADA -->
 
 <section class="hero" id="inicio">
+  <div class="hero-grid-bg" aria-hidden="true"></div>
+  <div class="hero-content-wrap">
   <div class="container hero-content">
     <div>
       <div class="tag">Tecnología para hacer crecer tu negocio</div>
@@ -655,12 +798,29 @@ footer {
     </div>
 
     <div class="hero-graphic">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-ring ring-a" aria-hidden="true"></div>
+      <div class="hero-ring ring-b" aria-hidden="true"></div>
+      <div class="hero-ring ring-c" aria-hidden="true"></div>
+      <div class="hero-node node-a" aria-hidden="true"></div>
+      <div class="hero-node node-b" aria-hidden="true"></div>
+      <div class="hero-node node-c" aria-hidden="true"></div>
       <div class="orbit"></div>
       <div class="cloud">☁</div>
-      <div class="float one">⌘</div>
-      <div class="float two">⇄</div>
-      <div class="float three">↗</div>
+      <div class="tech-panel tech-code" aria-hidden="true">
+        <span class="tech-icon">&lt;/&gt;</span>
+        <span class="tech-lines"><i></i><i></i><i></i></span>
+      </div>
+      <div class="tech-panel tech-data" aria-hidden="true">
+        <span class="database-icon"><i></i><i></i><i></i></span>
+        <span class="tech-lines"><i></i><i></i></span>
+      </div>
+      <div class="tech-panel tech-network" aria-hidden="true">
+        <span class="network-icon"><i></i><i></i><i></i><b></b></span>
+        <span class="tech-lines"><i></i><i></i></span>
+      </div>
     </div>
+  </div>
   </div>
 </section>
 
@@ -1085,22 +1245,23 @@ footer {
 
       <div class="form-group">
         <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" required placeholder="Tu nombre">
+        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
       </div>
 
       <div class="form-group">
         <label for="email">Email</label>
-        <input type="email" id="email" required placeholder="tu@email.com">
+        <input type="email" id="email" name="email" required placeholder="tu@email.com">
       </div>
 
       <div class="form-group">
         <label for="mensaje">Mensaje</label>
-        <textarea id="mensaje" required placeholder="Contanos sobre tu proyecto..."></textarea>
+        <textarea id="mensaje" name="mensaje" required placeholder="Contanos sobre tu proyecto..."></textarea>
       </div>
 
-      <button type="submit" class="btn btn-primary">
+      <button type="submit" class="btn btn-primary" id="contactSubmit">
         Enviar consulta →
       </button>
+      <p id="contactStatus" role="status" aria-live="polite"></p>
 
     </form>
 
@@ -1125,46 +1286,95 @@ footer {
     });
   });
 
-  // Formulario de contacto mediante correo
-  document.getElementById('contactForm').addEventListener('submit', event => {
+  // Envío del formulario mediante Getform
+  document.getElementById('contactForm').addEventListener('submit', async event => {
     event.preventDefault();
 
-    const nombre = document.getElementById('nombre').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const mensaje = document.getElementById('mensaje').value.trim();
+    const form = event.currentTarget;
+    const button = document.getElementById('contactSubmit');
+    const status = document.getElementById('contactStatus');
+    button.disabled = true;
+    button.textContent = 'Enviando...';
+    status.textContent = '';
 
-    const subject = encodeURIComponent('Consulta desde el sitio web - Nube Sistemas');
-    const body = encodeURIComponent(
-      `Nombre: ${nombre}\nEmail: ${email}\n\nMensaje:\n${mensaje}`
-    );
+    try {
+      const response = await fetch('https://getform.io/f/bdrnldrb', {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      });
 
-    window.location.href =
-      `mailto:ventasnubesistem@gmail.com?subject=${subject}&body=${body}`;
+      if (!response.ok) throw new Error('No se pudo enviar el formulario');
+
+      status.textContent = '¡Gracias! Tu consulta fue enviada correctamente.';
+      form.reset();
+    } catch (error) {
+      status.textContent = 'No se pudo enviar la consulta. Intentá nuevamente o escribinos por email.';
+    } finally {
+      button.disabled = false;
+      button.textContent = 'Enviar consulta →';
+    }
   });
 
   // Año automático
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 
+
+
+
 <script>
-  document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    const nombre = document.getElementById('nombre').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const mensaje = document.getElementById('mensaje').value.trim();
-
-    const asunto = encodeURIComponent('Consulta desde la web - Nube Sistemas');
-    const cuerpo = encodeURIComponent(
-      'Nombre: ' + nombre + '\n' +
-      'Email: ' + email + '\n\n' +
-      'Mensaje:\n' + mensaje
-    );
-
-    window.location.href =
-      'mailto:ventasnubesistem@gmail.com?cc=nubesistemasinformaticos@gmail.com&subject=' +
-      asunto + '&body=' + cuerpo;
+(() => {
+  const header = document.querySelector('header');
+  const nav = header?.querySelector('nav');
+  const links = header?.querySelector('.nav-links');
+  const toggle = header?.querySelector('.mobile-toggle');
+  if (!nav || !links || !toggle) return;
+  const mobileMenu = document.createElement('div');
+  mobileMenu.className = 'mobile-menu';
+  mobileMenu.setAttribute('aria-hidden', 'true');
+  [...links.querySelectorAll('a')].forEach(link => {
+    const item = link.cloneNode(true);
+    item.addEventListener('click', closeMenu);
+    mobileMenu.appendChild(item);
   });
+  const cta = nav.querySelector('.nav-button');
+  if (cta) {
+    const item = cta.cloneNode(true);
+    item.addEventListener('click', closeMenu);
+    mobileMenu.appendChild(item);
+  }
+  nav.insertAdjacentElement('afterend', mobileMenu);
+  function closeMenu() {
+    mobileMenu.classList.remove('open');
+    toggle.classList.remove('active');
+    toggle.setAttribute('aria-expanded', 'false');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('menu-open');
+  }
+  toggle.addEventListener('click', () => {
+    const open = mobileMenu.classList.toggle('open');
+    toggle.classList.toggle('active', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    mobileMenu.setAttribute('aria-hidden', String(!open));
+    document.body.classList.toggle('menu-open', open);
+  });
+  window.addEventListener('resize', () => { if (window.innerWidth > 760) closeMenu(); });
+
+  // Reveal sections and cards as they enter the viewport.
+  const revealTargets = document.querySelectorAll('.section-title, .service-card, .about-visual, .about-text, .person, .process, .faq-item, .contact-info, .contact-form');
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealTargets.forEach(el => { el.classList.add('reveal'); observer.observe(el); });
+  } else revealTargets.forEach(el => el.classList.add('is-visible'));
+})();
 </script>
 
 </body>
